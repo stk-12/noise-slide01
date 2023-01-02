@@ -71,6 +71,9 @@ async function init(){
     uTexResolution: {
       value: new THREE.Vector2(2048, 1024)
     },
+    uNoiseScale: {
+      value: new THREE.Vector2(3.0, 3.0)
+    },
     uProgress: {
       value: 0.0
     },
@@ -120,6 +123,33 @@ async function init(){
       uniforms.uProgress.value = 0.0;
     },
   });
+
+  //change noise parameter
+  const navBtns = document.querySelectorAll('button');
+  navBtns.forEach((navBtn)=>{
+    navBtn.addEventListener('click', (e)=>{
+      let num = Number(navBtn.dataset.effect);
+      navBtns.forEach((navBtn)=>{
+        navBtn.classList.remove('is-active');
+      });
+      e.target.classList.add('is-active');
+
+      switch(num) {
+        case 1:
+          uniforms.uNoiseScale.value.set(3.0, 3.0);
+          break;
+        case 2:
+          uniforms.uNoiseScale.value.set(500.0, 500.0);
+          break;
+        case 3:
+          uniforms.uNoiseScale.value.set(3.0, 500.0);
+          break;
+        case 4:
+          uniforms.uNoiseScale.value.set(500.0, 3.0);
+          break;
+      }
+    });
+  })
 
 
   function animate(){
