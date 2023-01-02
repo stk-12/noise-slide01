@@ -1,0 +1,21 @@
+{
+  "name": "three-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.0.7"
+  },
+  "dependencies": {
+    "glsl-noise": "^0.0.0",
+    "glslify": "^7.1.1",
+    "gsap": "^3.11.4",
+    "lil-gui": "^0.17.0",
+    "three": "^0.143.0"
+  }
+}

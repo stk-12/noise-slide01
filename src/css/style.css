@@ -1,0 +1,64 @@
+:root {
+}
+
+body {
+  overflow: hidden;
+  background: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 9vw;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+nav {
+  position: fixed;
+  top: 25px;
+  left: 25px
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+nav li {
+  margin: 0 7px
+}
+
+nav button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  font-size: 20px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none
+}
+
+nav button.is-active {
+  color: #ffc107;
+}
+
+nav button:hover {
+  text-decoration: underline;
+}
